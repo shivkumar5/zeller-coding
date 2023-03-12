@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Zeller Coding Challenge
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,8 +39,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Approach for building components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I have configured `Amplify` in `App.tsx` for data fetching. This project consist of one page called `Customers` page.
+`Customers` page is responsible for selecting the user roles and it displays the user data based on the user type. We fetch customers data on load of the page and store it in `users` state. Then I filter the customer based on the selected role and pass the filtered data to `UsersList` component. `UsersList` component displays heading based on user role and then iterate through the users array and render `User` component.
+`Customers` component also consist of `UserSelector` component where we select the user role. We have two roles for user so stored it as an `enum`.
+
+** For simplicity I have put all the css in `App.css`
